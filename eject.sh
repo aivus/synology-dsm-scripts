@@ -5,6 +5,8 @@
 # ./eject.sh sdq
 # Tested on DSM 6.1.3-15152 Update 8
 
+set -e;
+
 # disk="sdq";
 disk=$1;
 
@@ -13,9 +15,6 @@ if [ ! -e  "/dev/${disk}" ] ; then
     exit 1;
 fi
 
-# Sleep to be sure that disk mounted properly after boot-up
-# sleep 60;
-
 # Sync writes
 sync;
 # Unmount sdq disks (all partitions)
@@ -23,4 +22,4 @@ sync;
 # Safe sleep
 sleep 5;
 # Remove disk from the usbtab file to remove it from the DSM
-echo 1 > /sys/block/sdq/device/delete
+echo 1 > /sys/block/sdq/device/delete;
