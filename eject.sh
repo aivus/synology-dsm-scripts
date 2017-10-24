@@ -1,5 +1,6 @@
 #!/bin/sh
 # This script allows to eject USB disk from the DSM
+# Repo: https://github.com/aivus/synology-dsm-scripts
 # Usage:
 # ./eject.sh sdq
 # Tested on DSM 6.1.3-15152 Update 8
