@@ -22,4 +22,4 @@ sync;
 # Safe sleep
 sleep 5;
 # Remove disk from the usbtab file to remove it from the DSM
-sed -i "/${disk}/d" /tmp/usbtab;
+echo 1 > /sys/block/sdq/device/delete
