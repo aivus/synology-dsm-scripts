@@ -18,6 +18,7 @@ sleep 60;
 # Download script if it doesn't exist
 if [ ! -f /root/eject.sh ]; then
     curl https://raw.githubusercontent.com/aivus/synology-dsm-scripts/master/eject.sh --output /root/eject.sh
+    chmod +x /root/eject.sh
 fi
 
 # Eject sdq disk
@@ -34,7 +35,7 @@ Where:
 * `/volumeUSB2/usbshare2-2` is a path where the USB disk should be mounted (is used to verify that mount was successful)
 
 
-To found devie identifier:
+To found device identifier:
 ```
 sh-4.3# ls -l /sys/bus/usb/devices/ | grep 1-3
 lrwxrwxrwx 1 root root 0 Apr  7 04:38 1-3 -> ../../../devices/pci0000:00/0000:00:14.0/usb1/1-3
@@ -54,6 +55,7 @@ sleep 60;
 # Download script if it doesn't exist
 if [ ! -f /root/eject.sh ]; then
     curl https://raw.githubusercontent.com/aivus/synology-dsm-scripts/master/remount.sh --output /root/remount.sh
+    chmod +x /root/remount.sh
 fi
 
 /root/remount.sh 1-3 /volumeUSB2/usbshare2-2
