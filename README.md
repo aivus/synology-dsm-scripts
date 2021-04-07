@@ -53,7 +53,7 @@ Trigger script:
 sleep 60;
 
 # Download script if it doesn't exist
-if [ ! -f /root/eject.sh ]; then
+if [ ! -f /root/remount.sh ]; then
     curl https://raw.githubusercontent.com/aivus/synology-dsm-scripts/master/remount.sh --output /root/remount.sh
     chmod +x /root/remount.sh
 fi
