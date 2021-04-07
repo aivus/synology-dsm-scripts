@@ -49,9 +49,6 @@ Trigger script:
 ```bash
 #!/bin/bash
 
-# Sleep to be sure that disk mounted properly after boot-up
-sleep 60;
-
 # Download script if it doesn't exist
 if [ ! -f /root/remount.sh ]; then
     curl https://raw.githubusercontent.com/aivus/synology-dsm-scripts/master/remount.sh --output /root/remount.sh
