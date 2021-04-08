@@ -3,6 +3,9 @@ Some useful scripts for Synology DSM
 
 Next scripts should be placed to the body of user-defined script in Task Scheduler.
 
+**Note!** Keep in mind that DSM update process removes custom content from the `/root` directory.
+That's why scripts below have the code to download files from the GitHub.
+
 
 ## Eject USB disk from the DSM using eject.sh
 
