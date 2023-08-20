@@ -20,7 +20,7 @@ sleep 60;
 
 # Download script if it doesn't exist
 if [ ! -f /root/eject.sh ]; then
-    curl https://raw.githubusercontent.com/aivus/synology-dsm-scripts/master/eject.sh --output /root/eject.sh
+    curl https://raw.githubusercontent.com/aivus/synology-dsm-scripts/v1.0.0/eject.sh --output /root/eject.sh
     chmod +x /root/eject.sh
 fi
 
@@ -54,7 +54,7 @@ Trigger script:
 
 # Download script if it doesn't exist
 if [ ! -f /root/remount.sh ]; then
-    curl https://raw.githubusercontent.com/aivus/synology-dsm-scripts/master/remount.sh --output /root/remount.sh
+    curl https://raw.githubusercontent.com/aivus/synology-dsm-scripts/v1.0.0/remount.sh --output /root/remount.sh
     chmod +x /root/remount.sh
 fi
 
